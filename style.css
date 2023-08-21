@@ -1,3 +1,25 @@
 * {
 	font-family: Georgia;
+	color: black;
+}
+body{
+	background-color: #3a3a3a;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+#main {
+	background-color: #e6eaee;
+	border-radius: 30px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 25%;
+	margin-right: 25%;
+	padding: 20px;
+}
+footer{
+	width: 100%;
+	color: white;
+	text-align: center;
+	margin-top: auto;
 }
