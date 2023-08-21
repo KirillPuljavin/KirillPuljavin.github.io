@@ -8,10 +8,34 @@
 <body>
 
 <div id="main" style="min-height: 50vh;">
-    <p> TEST </p>
+    <h2 style="text-align: center; font-family: Consolas"> Kirill Puljavin / Portfolio </h2>
+    <hr>
+    <div class="menu">
+        <button onclick=""> Om Mig </button>
+        <button onclick=""> Expertise </button>
+        <button onclick=""> NTI TE4 Projekt </button>
+        <button onclick=""> Övriga Projekt </button>
+    </div>
+    <br><br><br>
+
+    <div id="menuTab0"> <p> Om Mig </p> </div>
+    <div id="menuTab1"> <p> Expertise </p> </div>
+    <div id="menuTab2"> <p> TE4 Projekt </p> </div>
+    <div id="menuTab3"> <p> Övriga Projekt </p> </div>
 </div>
 
 <footer> KIRILL PULJAVIN COPYRIGHT 2023 </footer>
 
 </body>
+<script>
+    function menuOpenTab(i) {
+        var x = document.getElementById("menuTab" + i);
+        document.getElementById("menuTab0").style.display = "block";
+        document.getElementById("menuTab1").style.display = "block";
+        document.getElementById("menuTab2").style.display = "block";
+        document.getElementById("menuTab3").style.display = "block";
+
+        x.style.display = "none";
+    }
+</script>
 </html>
