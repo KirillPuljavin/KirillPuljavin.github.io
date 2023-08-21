@@ -1,71 +1,60 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Kirill Puljavin</title>
-    <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<title>Kirill Puljavin</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div id="main" style="min-height: 50vh;">
-    <h2 style="text-align: center; font-family: Consolas"> Kirill Puljavin / Portfolio </h2>
-    <hr>
-    <div class="menu">
-        <button onclick="menuOpenTab(0)"> Om Mig </button>
-        <button onclick="menuOpenTab(1)"> Expertise </button>
-        <button onclick="menuOpenTab(2)"> NTI TE4 Projekt </button>
-        <button onclick="menuOpenTab(3)"> Övriga Projekt </button>
-    </div>
-    <br><br><br>
+	<h2 style="text-align: center; font-family: Consolas"> Kirill Puljavin / Portfolio </h2>
+	<hr>
+	<div class="menu">
+		<button onclick="menuOpenTab(0)"> Om Mig </button>
+		<button onclick="menuOpenTab(1)"> Expertise </button>
+		<button onclick="menuOpenTab(2)"> NTI TE4 Projekt </button>
+		<button onclick="menuOpenTab(3)"> Övriga Projekt </button>
+	</div>
+	<br><br><br>
 
-    <div id="menuTab0" style="display: none;">
-        <p> Om Mig </p>
-    </div>
-
-    <div id="menuTab1" style="display: none;">
-        <p> Expertise </p>
-    </div>
-
-    <div id="menuTab2" style="display: none;">
-        <p> TE4 Projekt </p>
-    </div>
-
-    <div id="menuTab3" style="display: none;">
-        <p> Övriga Projekt </p>
-    </div>
+	<div id="menuTab0" style="display: none;"> </div>
+	<div id="menuTab1" style="display: none;"> </div>
+	<div id="menuTab2" style="display: none;"> </div>
+	<div id="menuTab3" style="display: none;"> </div>
 </div>
 
 <footer> KIRILL PULJAVIN COPYRIGHT 2023 </footer>
 
 <script>
-    function menuOpenTab(i) {
-        document.getElementById("menuTab0").style.display = "none";
-        document.getElementById("menuTab1").style.display = "none";
-        document.getElementById("menuTab2").style.display = "none";
-        document.getElementById("menuTab3").style.display = "none";
+	function menuOpenTab(i) {
+		document.getElementById("menuTab0").style.display = "none";
+		document.getElementById("menuTab1").style.display = "none";
+		document.getElementById("menuTab2").style.display = "none";
+		document.getElementById("menuTab3").style.display = "none";
 
-        var x = document.getElementById("menuTab" + i);
-        x.style.display = "block";
-    }
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() { document.getElementById("menuTab0").innerHTML = this.responseText; };
-    xhttp.open("GET", "menuTab0.html", true);
-    xhttp.send();
+		var x = document.getElementById("menuTab" + i);
+		x.style.display = "block";
+	}
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() { document.getElementById("menuTab0").innerHTML = this.responseText; };
+	xhttp.open("GET", "menuTab0.html", true);
+	xhttp.send();
 
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() { document.getElementById("menuTab1").innerHTML = this.responseText; };
-    xhttp.open("GET", "menuTab1.html", true);
-    xhttp.send();
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() { document.getElementById("menuTab1").innerHTML = this.responseText; };
+	xhttp.open("GET", "menuTab1.html", true);
+	xhttp.send();
 
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() { document.getElementById("menuTab2").innerHTML = this.responseText; };
-    xhttp.open("GET", "menuTab2.html", true);
-    xhttp.send();
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() { document.getElementById("menuTab2").innerHTML = this.responseText; };
+	xhttp.open("GET", "menuTab2.html", true);
+	xhttp.send();
 
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() { document.getElementById("menuTab3").innerHTML = this.responseText; };
-    xhttp.open("GET", "menuTab3.html", true);
-    xhttp.send();
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() { document.getElementById("menuTab3").innerHTML = this.responseText; };
+	xhttp.open("GET", "menuTab3.html", true);
+	xhttp.send();
 </script>
 </body>
 </html>
