@@ -1,5 +1,5 @@
 * {
-	font-family: Arial;
+	font-family: Consolas;
 	color: black;
 }
 :root {
@@ -28,15 +28,39 @@ body{
 #main {
 	background-color: var(--light);
 	border-radius: 30px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	margin-left: 25%;
-	margin-right: 25%;
+	margin-top: 10px; margin-bottom: 10px;
+	margin-left: 25%; margin-right: 25%;
 	padding: 20px;
 }
+
+.grid {
+	margin-left: 50px; margin-right: 50px;
+	display: flex;
+}
+#profileImg {
+	float: left;
+	width: 30%;
+}
+#infoColumn {
+	float: left;
+	width: calc(70% - 50px);
+	padding-left: 50px;
+	display: block;
+	margin-block: auto;
+}
+
+.skillGroup {
+
+}
+
 footer{
 	width: 100%;
 	color: var(--light);
 	text-align: center;
 	margin-top: auto;
+}
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
 }
