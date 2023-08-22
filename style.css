@@ -16,17 +16,19 @@ hr {
 }
 body{
 	background-color: var(--dark);
-	min-height: 95vh;
-	min-width: 900px;
+	min-width: 900px; min-height: 95vh;
 	display: flex;
 	flex-direction: column;
+}
+.menu {
+	color: var(--darkblue);
+	height: auto; min-height: 50px;
 }
 .menu button {
 	background-color: var(--dark);
 	border: none;
-	color: var(--darkblue);
 	float: left;
-	width: 25%; height: 50px;
+	width: 25%;
 }
 .menu button:not(:last-child) {
 	border-right: none; /* Prevent double borders */
@@ -35,6 +37,7 @@ body{
 	background-color: var(--dark2);
 }
 #container {
+	min-height: 1000px;
 	background-color: var(--darkblue);
 	margin-top: 20px; margin-bottom: 50px;
 	margin-left: 20%; margin-right: 20%;
@@ -87,7 +90,6 @@ footer{
 	width: 100%;
 	text-align: center;
 }
-
 .clearfix::after {
 	content: "";
 	clear: both;
