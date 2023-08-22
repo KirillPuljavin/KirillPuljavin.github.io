@@ -7,9 +7,10 @@
 </head>
 <body>
 
-<div id="main" style="min-height: 50vh;">
+<div id="container" style="min-height: 50vh;">
 	<h1 style="text-align: center; font-family: Consolas"> Kirill Puljavin / Portfolio </h1>
-	<hr><br>
+	<hr>
+	<br>
 	<div class="menu">
 		<button onclick="menuOpenTab(0)"><h3 style="color: lightgray;"> Om Mig </h3></button>
 		<button onclick="menuOpenTab(1)"><h3 style="color: lightgray;"> Expertise </h3></button>
@@ -23,7 +24,10 @@
 	<div id="menuTab3" style="display: none;"> </div>
 </div>
 
-<footer> KIRILL PULJAVIN COPYRIGHT 2023 </footer>
+<footer>
+	<hr style="height: 2px; border-style: none; background-color: var(--darkblue);">
+	<h4 style="color: var(--font)"> © 2023 - Kirill Puljavin, All rights reserved. </h4>
+</footer>
 
 <script>
 	function menuOpenTab(i) {
