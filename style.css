@@ -6,7 +6,8 @@
 	--dark: #0E1116;
 	--dark2: #11151C;
 	--darkblue: #171B21;
-	--gray: #69696946;
+	--darkgray: #22262C;
+	--gray: #31363C;
 	--font: #7E858F;
 	--green: #64B75D;
 }
@@ -17,10 +18,11 @@ hr {
 }
 body{
 	background-color: var(--dark);
-	min-width: 900px; min-height: 95vh;
+	min-height: 95vh;
 	display: flex;
 	flex-direction: column;
 }
+
 .menu {
 	color: var(--darkblue);
 	height: auto; min-height: 50px;
@@ -37,14 +39,26 @@ body{
 .menu button:hover {
 	background-color: var(--dark2);
 }
+
 #container {
-	min-height: 1000px;
 	background-color: var(--darkblue);
 	margin-top: 20px; margin-bottom: 50px;
 	margin-left: 20%; margin-right: 20%;
 	padding: 30px;
 	border-radius: 10px; border-style: solid;
 	border-width: 1px; border-color: var(--gray);
+}
+@media screen and (max-width: 1200px) {
+	#container {
+		width: auto;
+		margin-left: 10%; margin-right: 10%;
+	}
+}
+@media screen and (max-width: 800px) {
+	#container {
+		width: 100%;
+		margin-left: 0%; margin-right: 0%;
+	}
 }
 
 .grid {
