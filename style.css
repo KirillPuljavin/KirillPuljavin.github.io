@@ -33,9 +33,6 @@ body{
 	float: left;
 	width: 25%;
 }
-.menu button:not(:last-child) {
-	border-right: none; /* Prevent double borders */
-}
 .menu button:hover {
 	background-color: var(--dark2);
 }
@@ -43,7 +40,7 @@ body{
 #container {
 	background-color: var(--darkblue);
 	margin-top: 20px; margin-bottom: 50px;
-	margin-left: 20%; margin-right: 20%;
+	margin-left: 22%; margin-right: 22%;
 	padding: 30px;
 	border-radius: 10px; border-style: solid;
 	border-width: 1px; border-color: var(--gray);
@@ -56,8 +53,14 @@ body{
 }
 @media screen and (max-width: 800px) {
 	#container {
-		width: 100%;
+		width: 90%;
 		margin-left: 0%; margin-right: 0%;
+	}
+	.menu button {
+		width: 50%;
+	}
+	.menu {
+		height: 100px;
 	}
 }
 
