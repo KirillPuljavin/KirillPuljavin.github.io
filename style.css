@@ -84,8 +84,7 @@ p {
 
 .socialDiv {
 	display: flex;
-	height: 40px;s
-	margin: 0 100px;
+	height: 40px;
 }
 .socialDiv a {
 	display: inline-block;
