@@ -74,6 +74,16 @@
       };
       xhttp.open("GET", "menuTab3.html", true);
       xhttp.send();
+
+      // Update Age
+      const nameAndAgeElement = document.getElementById("nameAndAge");
+      function updateAge() {
+        const birthYear = 2004;
+        const currentYear = new Date().getFullYear();
+        const age = currentYear - birthYear;
+        nameAndAgeElement.textContent = `Kirill Karl Puljavin ${age}`;
+      }
+      updateAge();
     </script>
   </body>
 </html>
