@@ -1,34 +1,31 @@
 import profileImg from "../assets/profileImg.jpg";
 
+function age() {
+  return new Date().getFullYear() - 2004;
+}
+
 const Main = () => {
   return (
     <div id="main">
       <div className="flex">
-        <div id="profileImg">
-          <img
-            src={profileImg}
-            alt="Profile Image"
-            style={{ width: "100%", borderRadius: "50%" }}
-          />
+        <div id="profileImg" className="leftColumn">
+          <img src={profileImg} alt="Profile Image" className="profileImg" />
         </div>
 
-        <div id="infoColumn">
-          <h1 id="nameAndAge">Kirill Karl Puljavin - 2004</h1>
-          <h2>Software Developer | Programmerare | Projekt Ledare</h2>
+        <div id="infoColumn" className="rightColumn">
+          <h1 id="nameAndAge">Kirill Karl Puljavin, {age()} år</h1>
+          <p>System Utvecklare | Software Engineer</p>
+
+          <div className="socialDiv">
+            <a href="https://www.linkedin.com/in/kirill-puljavin-91a66a254/">
+              LinkedIn
+            </a>
+            <a href="#"> Discord </a>
+            <a href="#"> Gmail </a>
+            <a href="https://github.com/KirillPuljavin"> Github </a>
+          </div>
         </div>
       </div>
-
-      <br />
-      <hr />
-      <div className="socialDiv">
-        <a href="https://www.linkedin.com/in/kirill-puljavin-91a66a254/">
-          LinkedIn
-        </a>
-        <a href="#"> Discord </a>
-        <a href="#"> Gmail </a>
-        <a href="https://github.com/KirillPuljavin"> Github </a>
-      </div>
-      <hr />
       <br />
 
       <div>
@@ -43,7 +40,8 @@ const Main = () => {
           verkligen gör avtryck. Jag är stolt över att kalla Helsingborg mitt
           hem, och i mitt liv delar jag rummet med tre underbara katter.
         </p>
-        <br />
+
+        <div className="filler"></div>
 
         <h2>Utbildning</h2>
         <h5 id="Utbildning">
@@ -66,7 +64,8 @@ const Main = () => {
           också att omsätta dessa idéer till verkliga projekt med en meningsfull
           påverkan.
         </p>
-        <br />
+
+        <div className="filler"></div>
 
         <h2>Metodik</h2>
         <p style={{ textAlign: "justify" }} className="bigP">

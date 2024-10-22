@@ -14,6 +14,7 @@ const Container = ({ children }) => {
     <>
       <div id="container">
         <Header />
+        <br />
         {children}
       </div>
 

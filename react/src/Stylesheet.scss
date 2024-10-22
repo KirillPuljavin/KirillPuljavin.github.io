@@ -1,12 +1,12 @@
 ///// GENERAL
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   font-family: Verdana;
   color: #d5d5d5;
 }
 html {
+  margin: 0;
+  padding: 0;
   scroll-behavior: smooth;
 }
 .clearfix::after {
@@ -32,6 +32,11 @@ body {
 }
 .flex {
   display: flex;
+}
+.filler {
+  display: block;
+  height: 30px;
+  width: 100%;
 }
 
 @media screen and (max-width: 1300px) {
@@ -64,6 +69,16 @@ hr {
   border-style: none;
   background-color: var(--gray);
 }
+a {
+  text-decoration: none;
+  list-style: none;
+  padding: 10px;
+  font-size: 15px;
+  color: #c2c2c2;
+}
+button {
+  padding: 10px 5px;
+}
 h1,
 h2,
 h3,
@@ -77,11 +92,6 @@ p {
 }
 .bigP {
   font-size: 16px;
-}
-footer {
-  margin-top: auto;
-  width: 100%;
-  text-align: center;
 }
 
 ///// HIERARCHY
@@ -107,25 +117,59 @@ footer {
     border: none;
     float: left;
     width: 25%;
+    margin: 0 0 25px 0;
+    padding: 0px;
+    transition: background-color, transform 0.2s ease-in;
   }
   .menu button:hover {
     background-color: var(--dark2);
+    transform: scale(1.05);
   }
 
   // Main
   #main {
     #profileImg {
-      float: left;
-      width: 30%;
+      flex: 0 0 33.3%; /* Occupy 30% of the width */
       min-width: 200px;
-      padding: 10px;
+
+      .profileImg {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+      }
     }
     #infoColumn {
-      float: left;
-      width: calc(70% - 50px);
+      flex: 1; /* Occupy remaining space */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       padding-left: 50px;
-      display: block;
-      margin-block: auto;
+      color: white;
+
+      #nameAndAge {
+        margin-bottom: 10px;
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+
+      .socials {
+        margin-top: 20px;
+        display: flex;
+        gap: 15px;
+
+        a {
+          color: white;
+          font-weight: bold;
+          text-decoration: none;
+
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+      }
     }
     #Utbildning * {
       color: var(--font);
@@ -133,19 +177,22 @@ footer {
 
     .socialDiv {
       display: flex;
-      height: 40px;
-    }
-    .socialDiv a {
-      display: inline-block;
-      width: 25%;
-      color: var(--green);
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 17px;
-      text-align: center;
-    }
-    .socialDiv a:hover {
-      opacity: 0.6;
+      justify-content: space-between;
+      padding: 20px;
+      background-color: #333;
+
+      a {
+        width: 25%;
+        text-align: center;
+        font-size: 1.1rem;
+        color: var(--green);
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover {
+          opacity: 0.6;
+        }
+      }
     }
   }
   // Details
@@ -171,13 +218,6 @@ footer {
       top: calc(50% - 60px);
     }
     #expList li,
-    a {
-      text-decoration: none;
-      list-style: none;
-      padding: 10px;
-      font-size: 15px;
-      color: #c2c2c2;
-    }
     #expList a:hover {
       color: var(--font);
     }
@@ -190,4 +230,10 @@ footer {
   #projects {
     display: block;
   }
+}
+
+footer {
+  margin-top: auto;
+  width: 100%;
+  text-align: center;
 }

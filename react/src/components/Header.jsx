@@ -1,6 +1,8 @@
 const Header = () => {
   return (
     <>
+      <h1 style={{ textAlign: "center" }}> Information </h1>
+
       <div className="menu">
         <button onClick={() => (location.href = "/")}>
           <h3>Om Mig</h3>
@@ -16,7 +18,6 @@ const Header = () => {
         </button>
       </div>
 
-      <h1 style={{ textAlign: "center" }}>Kirill Puljavin / Portfolio</h1>
       <hr style={{ margin: "0 -30px" }} />
     </>
   );
