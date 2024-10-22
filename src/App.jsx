@@ -28,10 +28,16 @@ const App = () => {
     <Router>
       <Container>
         <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/details" element={<Details />} />
-          <Route path="/te4" element={<TE4 />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/kirillpuljavin.github.io/" element={<Main />} />
+          <Route
+            path="/kirillpuljavin.github.io/details"
+            element={<Details />}
+          />
+          <Route path="/kirillpuljavin.github.io/te4" element={<TE4 />} />
+          <Route
+            path="/kirillpuljavin.github.io/projects"
+            element={<Projects />}
+          />
         </Routes>
       </Container>
     </Router>
