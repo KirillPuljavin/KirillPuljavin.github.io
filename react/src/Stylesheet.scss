@@ -147,26 +147,24 @@ p {
       color: white;
 
       #nameAndAge {
-        margin-bottom: 10px;
-        font-size: 2rem;
+        margin-bottom: 0px;
       }
-
-      p {
-        font-size: 1.2rem;
-      }
-
       .socials {
-        margin-top: 20px;
         display: flex;
-        gap: 15px;
+        align-items: center;
+        margin: 10px 0;
 
         a {
-          color: white;
+          text-align: center;
+          font-size: 15px;
+          color: var(--green);
+          text-decoration: underline;
           font-weight: bold;
-          text-decoration: none;
-
+          padding: 0 4rem 0 0;
+          transition: opacity, transform 0.15s ease;
           &:hover {
-            opacity: 0.6;
+            opacity: 0.8;
+            transform: scale(1.02);
           }
         }
       }

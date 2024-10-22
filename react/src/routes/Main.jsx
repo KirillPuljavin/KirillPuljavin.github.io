@@ -15,8 +15,7 @@ const Main = () => {
         <div id="infoColumn" className="rightColumn">
           <h1 id="nameAndAge">Kirill Karl Puljavin, {age()} år</h1>
           <p>System Utvecklare | Software Engineer</p>
-
-          <div className="socialDiv">
+          <div className="socials">
             <a href="https://www.linkedin.com/in/kirill-puljavin-91a66a254/">
               LinkedIn
             </a>
