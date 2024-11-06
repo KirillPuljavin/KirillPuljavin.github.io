@@ -1,25 +1,23 @@
+import { useNavigate } from "react-router-dom";
+
 const Header = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <h1 style={{ textAlign: "center" }}> Information </h1>
 
       <div className="menu">
-        <button onClick={() => (location.href = "/kirillpuljavin.github.io/")}>
+        <button onClick={() => navigate("/")}>
           <h3>Om Mig</h3>
         </button>
-        <button
-          onClick={() => (location.href = "/kirillpuljavin.github.io/details")}
-        >
+        <button onClick={() => navigate("/details")}>
           <h3>Kunskaper</h3>
         </button>
-        <button
-          onClick={() => (location.href = "/kirillpuljavin.github.io/te4")}
-        >
+        <button onClick={() => navigate("/te4")}>
           <h3>TE4 Projekt</h3>
         </button>
-        <button
-          onClick={() => (location.href = "/kirillpuljavin.github.io/projects")}
-        >
+        <button onClick={() => navigate("/projects")}>
           <h3>Egna Projekt</h3>
         </button>
       </div>
