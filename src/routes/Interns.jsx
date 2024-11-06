@@ -1,7 +1,7 @@
 const Interns = () => {
   return (
     <div id="interns">
-      <h1>Interns</h1>
+      <h1> Praktik </h1>
     </div>
   );
 };

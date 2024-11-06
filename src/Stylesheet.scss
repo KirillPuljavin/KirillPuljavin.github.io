@@ -107,23 +107,31 @@ p {
   border-style: solid;
   border-width: 1px;
   border-color: var(--gray);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 
   .menu {
-    height: auto;
-    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
   }
   .menu button {
     background-color: var(--dark);
+    color: var(--font);
     border: none;
-    float: left;
-    width: 25%;
-    margin: 0 0 25px 0;
-    padding: 0px;
-    transition: background-color, transform 0.2s ease-in;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
   }
   .menu button:hover {
     background-color: var(--dark2);
     transform: scale(1.05);
+  }
+  .menu h3 {
+    margin: 0;
+    padding: 10px 20px;
+    font-size: 1rem;
   }
 
   // Main
@@ -291,7 +299,7 @@ p {
   // Details
   #details {
     .skillGroup {
-      width: calc(100% - 40px);
+      width: calc(100%);
       background-color: var(--dark2);
       border-radius: 5px;
       padding: 1px 20px 10px 20px;
