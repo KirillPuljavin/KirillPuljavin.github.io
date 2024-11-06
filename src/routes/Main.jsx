@@ -1,4 +1,5 @@
 import profileImg from "../assets/profileImg.jpg";
+import EducationBlock from "../components/EducationBlock";
 
 function age() {
   return new Date().getFullYear() - 2004;
@@ -43,26 +44,20 @@ const Main = () => {
         <div className="filler"></div>
 
         <h2>Utbildning</h2>
-        <h5 id="Utbildning">
-          <b>
-            Grundskola i Vittsjö &emsp;&gt;&emsp; Internationella Engelska
-            Skolan i Hässleholm &emsp;&gt;&emsp; NTI Gymnasiet i Helsingborg
-          </b>
-        </h5>
-        <p style={{ textAlign: "justify" }} className="bigP">
-          Jag studerar för nuvarande på det tekniska fjärde året på NTI
-          Gymnasiet i Helsingborg. Där utvecklar jag inte bara mina kunskaper
-          utan även min starka passion som entreprenör. Att skapa är mitt
-          bränsle, och mitt mål är att skapa med en unik touch som verkligen gör
-          avtryck. Denna grundläggande utbildning har inte bara byggt upp min
-          kompetenssats, den har även fungerat som en kittlande inspiration för
-          min kreativa ådra. Att konceptualisera och gestalta användarvänliga
-          gränssnitt är en färdighet jag har bemästrat, precis som att
-          implementera och optimera mjukvarulösningar. Denna mångsidighet i mina
-          kunskaper ger mig möjligheten att inte bara tänka innovativt, utan
-          också att omsätta dessa idéer till verkliga projekt med en meningsfull
-          påverkan.
-        </p>
+        <div id="Utbildning">
+          <EducationBlock
+            title="Newton YH"
+            description="Jag studerade vid Newton YH där jag fokuserade på [specificera dina studier och erfarenheter]."
+          />
+          <EducationBlock
+            title="NTI Gymnasiet"
+            description="Under min tid på NTI Gymnasiet fördjupade jag mig i [specificera dina studier och erfarenheter]."
+          />
+          <EducationBlock
+            title="NTI TE4 GymnasieIngenjör Program"
+            description="På TE4 GymnasieIngenjör programmet vid NTI Gymnasiet utvecklade jag [specificera dina studier och erfarenheter]."
+          />
+        </div>
 
         <div className="filler"></div>
 

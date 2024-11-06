@@ -169,8 +169,70 @@ p {
         }
       }
     }
-    #Utbildning * {
-      color: var(--font);
+    #Utbildning {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      .education-block {
+        border: 2px solid var(--gray);
+        border-radius: 8px;
+        padding: 15px;
+        cursor: pointer;
+        background-color: var(--dark2);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+
+        /* Title Styling */
+        .block-title {
+          font-size: 1.2rem;
+          font-weight: bold;
+          color: var(--green);
+          margin: 0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        /* Arrow Indicator */
+        .arrow {
+          transition: transform 0.3s ease;
+          &.expanded {
+            transform: rotate(180deg);
+          }
+        }
+
+        /* Hover Effects */
+        &:hover {
+          background-color: var(--darkblue);
+          transform: scale(1.02);
+        }
+
+        /* Expanded Content */
+        .block-content {
+          max-height: 0;
+          opacity: 0;
+          transition: max-height 0.3s ease, opacity 0.3s ease;
+          overflow: hidden;
+          margin-top: 10px;
+
+          p {
+            font-size: 0.95rem;
+            color: var(--font);
+            text-align: justify;
+            margin: 0;
+          }
+        }
+
+        &.expanded {
+          max-height: 500px; /* Adjust as needed */
+          .block-content {
+            max-height: 300px; /* Adjust as needed */
+            opacity: 1;
+          }
+        }
+      }
     }
 
     .socialDiv {
