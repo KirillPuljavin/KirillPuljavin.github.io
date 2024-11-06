@@ -1,3 +1,4 @@
+// src/routes/Main.jsx
 import profileImg from "../assets/profileImg.jpg";
 import EducationBlock from "../components/EducationBlock";
 
@@ -14,7 +15,7 @@ const Main = () => {
         </div>
 
         <div id="infoColumn" className="rightColumn">
-          <h1 id="nameAndAge">Kirill Karl Puljavin, {age()} år</h1>
+          <h1 id="nameAndAge"> Killian Kirill Puljavin, {age()} år</h1>
           <p>System Utvecklare | Software Engineer</p>
           <div className="socials">
             <a href="https://www.linkedin.com/in/kirill-puljavin-91a66a254/">
@@ -46,16 +47,26 @@ const Main = () => {
         <h2>Utbildning</h2>
         <div id="Utbildning">
           <EducationBlock
-            title="Newton YH"
-            description="Jag studerade vid Newton YH där jag fokuserade på [specificera dina studier och erfarenheter]."
+            title="Newton Yrkeshögskola"
+            experience="2024 - 2026"
+            description="För närvarande inskriven i Newton Yrkeshögskolas Systemutvecklare .NET-program, med fokus på avancerad mjukvaruutveckling, .NET-ramverket och applikationsarkitektur. Utbildningen betonar praktiska färdigheter och branschkontakter, vilket förbereder mig för komplexa systemutvecklingsuppgifter."
+            labels={[
+              "Avancerad .NET-utveckling",
+              "Applikationsarkitektur",
+              "Praktisk mjukvaruteknik",
+            ]}
+          />
+          <EducationBlock
+            title="NTI Gymnasiet – TE4 Gymnasieingenjörsprogrammet"
+            experience="2023 - 2024"
+            description="Avslutade det ettåriga TE4 Gymnasieingenjörsprogrammet vid NTI Gymnasiet, med specialisering i mjukvarudesign. Programmet gav praktisk erfarenhet inom mjukvaruutveckling, projektledning och samarbetsprojekt, vilket lade en solid grund för min ingenjörskarriär."
+            labels={["Mjukvarudesign", "Projektledning", "Teamarbete"]}
           />
           <EducationBlock
             title="NTI Gymnasiet"
-            description="Under min tid på NTI Gymnasiet fördjupade jag mig i [specificera dina studier och erfarenheter]."
-          />
-          <EducationBlock
-            title="NTI TE4 GymnasieIngenjör Program"
-            description="På TE4 GymnasieIngenjör programmet vid NTI Gymnasiet utvecklade jag [specificera dina studier och erfarenheter]."
+            experience="2020 - 2023"
+            description="Tog examen från NTI Gymnasiets teknikprogram med inriktning på information och medieteknik. Utbildningen omfattade kurser i programmering, webbutveckling och nätverksteknik. Jag genomförde även en extra kurs i företagsekonomi, vilket breddade min förståelse för affärsverksamhet och ekonomiska principer."
+            labels={["Programmering", "Webbutveckling", "Företagsekonomi"]}
           />
         </div>
 
@@ -63,16 +74,18 @@ const Main = () => {
 
         <h2>Metodik</h2>
         <p style={{ textAlign: "justify" }} className="bigP">
-          Mitt utbildningsfokus har inte bara gett mig färdigheter, utan har
-          även format mitt tänkesätt. Det har gett mig förmågan att analysera
-          och lösa komplexa tekniska utmaningar på ett metodiskt sätt. Nu när
-          jag riktar in mig på entreprenörskap och projektutveckling, bär jag
-          med mig denna breda kompetensbas som bränsle för att skapa och driva
-          fram unika och nyskapande initiativ. Just nu är jag på jakt efter
-          likasinnade individer, personer som delar min entusiasm och min önskan
-          att inte bara samarbeta, utan att skapa något verkligt meningsfullt
-          tillsammans. Jag vill inte bara bygga nätverk; jag vill bygga
-          meningsfulla relationer som går bortom det professionella.
+          Min metodik bygger på en djupgående förmåga att snabbt och effektivt
+          förstå komplexa koncept. Jag har en naturlig talang för att
+          identifiera samband och skapa en helhetsbild, vilket gör att jag
+          snabbt kan sätta mig in i nya områden och sammanhang. Med ett
+          analytiskt sinne och ett unikt sätt att tänka kan jag se kärnan i
+          problem och förstå dem från flera perspektiv. Detta tillvägagångssätt
+          ger mig möjligheten att fatta välgrundade och rationella beslut som
+          bygger på insikt snarare än antaganden. Jag drivs av en stark vilja
+          att lära mig nytt, och jag har en beprövad förmåga att omvandla ny
+          kunskap till konkreta resultat. För mig handlar metodik inte bara om
+          struktur och teknik, det är ett sätt att kombinera förståelse oc h
+          utförande för att uppnå långsiktigt hållbara lösningar.
         </p>
         <br />
       </div>

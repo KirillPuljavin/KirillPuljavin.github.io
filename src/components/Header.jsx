@@ -14,11 +14,11 @@ const Header = () => {
         <button onClick={() => navigate("/details")}>
           <h3>Kunskaper</h3>
         </button>
-        <button onClick={() => navigate("/te4")}>
-          <h3>TE4 Projekt</h3>
+        <button onClick={() => navigate("/interns")}>
+          <h3> Interns </h3>
         </button>
-        <button onClick={() => navigate("/projects")}>
-          <h3>Egna Projekt</h3>
+        <button onClick={() => navigate("/publicWorks")}>
+          <h3> Public Works </h3>
         </button>
       </div>
 
