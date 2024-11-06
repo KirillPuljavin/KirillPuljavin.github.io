@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import "./Stylesheet.scss";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Main from "./routes/Main";
 import Details from "./routes/Details";
 import Projects from "./routes/Projects";
@@ -25,7 +25,7 @@ const Container = ({ children }) => {
 
 const App = () => {
   return (
-    <Router basename="/">
+    <Router>
       <Container>
         <Routes>
           <Route path="/" element={<Main />} />
