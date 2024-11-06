@@ -6,4 +6,5 @@ const TE4 = () => {
   );
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export default TE4;
