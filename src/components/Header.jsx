@@ -1,7 +1,25 @@
 import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 const Header = () => {
   const navigate = useNavigate();
+  const [isLightMode, setIsLightMode] = useState(false); // Default to dark mode
+
+  useEffect(() => {
+    document.body.classList.add("darkmode");
+
+    if (isLightMode) {
+      document.body.classList.add("lightmode");
+      document.body.classList.remove("darkmode");
+    } else {
+      document.body.classList.add("darkmode");
+      document.body.classList.remove("lightmode");
+    }
+  }, [isLightMode]);
+
+  const toggleTheme = () => {
+    setIsLightMode((prevMode) => !prevMode);
+  };
 
   return (
     <>
@@ -11,29 +29,35 @@ const Header = () => {
         Information
       </h1>
 
-      <div
-        className="menu"
-        style={{ display: "flex", justifyContent: "center", gap: "15px" }}
-      >
-        <button onClick={() => navigate("/")}>
-          <h3 style={{ margin: "0", padding: "10px 20px" }}>Om Mig</h3>
-        </button>
-        <button onClick={() => navigate("/details")}>
-          <h3 style={{ margin: "0", padding: "10px 20px" }}>Kunskaper</h3>
-        </button>
-        <button onClick={() => navigate("/interns")}>
-          <h3 style={{ margin: "0", padding: "10px 20px" }}>Praktik</h3>
-        </button>
-        <button onClick={() => navigate("/publicWorks")}>
-          <h3 style={{ margin: "0", padding: "10px 20px" }}>Publika Projekt</h3>
-        </button>
-      </div>
-
+      <button id="toggle-theme" onClick={toggleTheme}>
+        {isLightMode ? "Switch to Dark Mode" : "Switch to Light Mode"}
+      </button>
       <hr
         style={{
-          margin: "20px 0",
-          borderColor: "var(--gray)",
-          borderWidth: "1px",
+          width: "calc(100% + 100px)",
+          marginLeft: "-50px",
+          marginRight: "-50px",
+        }}
+      />
+      <div className="menu">
+        <button onClick={() => navigate("/")}>
+          <h3>Om Mig</h3>
+        </button>
+        <button onClick={() => navigate("/details")}>
+          <h3>Kunskaper</h3>
+        </button>
+        <button onClick={() => navigate("/interns")}>
+          <h3>Praktik</h3>
+        </button>
+        <button onClick={() => navigate("/publicWorks")}>
+          <h3>Publika Projekt</h3>
+        </button>
+      </div>
+      <hr
+        style={{
+          width: "calc(100% + 100px)",
+          marginLeft: "-50px",
+          marginRight: "-50px",
         }}
       />
     </>

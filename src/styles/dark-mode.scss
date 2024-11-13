@@ -1,0 +1,116 @@
+/* dark-mode.scss */
+
+.darkmode {
+  --text-primary: #d5d5d5;
+  --text-secondary: #9098a2;
+  --background-primary: #0e1116;
+  --background-secondary: #171b21;
+  --background-tertiary: #11151c;
+  --border-color: #262a30;
+  --accent-color: #58a152;
+  --highlight-color: #1a1d23;
+
+  color: var(--text-primary);
+  background-color: var(--background-primary);
+
+  hr {
+    background-color: var(--border-color);
+  }
+
+  a {
+    color: var(--text-secondary);
+  }
+
+  a:hover {
+    color: var(--accent-color);
+  }
+
+  button {
+    background-color: var(--background-secondary);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+  }
+
+  button:hover {
+    background-color: var(--background-tertiary);
+  }
+
+  #container {
+    background-color: var(--background-secondary);
+    border-color: var(--border-color);
+
+    .menu button {
+      background-color: var(--background-primary);
+      color: var(--text-secondary);
+
+      &:hover {
+        background-color: var(--highlight-color);
+      }
+    }
+
+    #main {
+      #infoColumn {
+        color: var(--text-primary);
+
+        .socials {
+          a {
+            color: var(--accent-color);
+          }
+        }
+      }
+    }
+
+    #Utbildning {
+      .education-block {
+        border-color: var(--border-color);
+        background-color: var(--background-tertiary);
+
+        &:hover {
+          background-color: var(--background-secondary);
+        }
+
+        .header {
+          .block-title {
+            color: var(--accent-color);
+          }
+
+          .experience {
+            color: var(--text-secondary);
+            background-color: var(--border-color);
+          }
+        }
+
+        .block-content p {
+          color: var(--text-secondary);
+        }
+
+        .labels {
+          .label {
+            background-color: var(--accent-color);
+            color: var(--background-primary);
+          }
+        }
+      }
+    }
+
+    #details {
+      .skillGroup {
+        background-color: var(--background-secondary);
+        border-color: var(--border-color);
+      }
+
+      .skillGroup * {
+        color: var(--text-secondary);
+      }
+
+      #expList li,
+      #expList a:hover {
+        color: var(--text-secondary);
+      }
+    }
+  }
+
+  footer {
+    color: var(--text-secondary);
+  }
+}

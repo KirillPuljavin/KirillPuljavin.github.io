@@ -9,6 +9,7 @@ function age() {
 const Main = () => {
   return (
     <div id="main">
+      <br />
       <div className="flex">
         <div id="profileImg" className="leftColumn">
           <img src={profileImg} alt="Profile Image" className="profileImg" />
@@ -59,14 +60,20 @@ const Main = () => {
           <EducationBlock
             title="NTI Gymnasiet – TE4 Gymnasieingenjörsprogrammet"
             experience="2023 - 2024"
-            description="Avslutade det ettåriga TE4 Gymnasieingenjörsprogrammet vid NTI Gymnasiet, med specialisering i mjukvarudesign. Programmet gav praktisk erfarenhet inom mjukvaruutveckling, projektledning och samarbetsprojekt, vilket lade en solid grund för min ingenjörskarriär."
-            labels={["Mjukvarudesign", "Projektledning", "Teamarbete"]}
+            description="Jag avslutade det ettåriga TE4 Gymnasieingenjörsprogrammet vid NTI Gymnasiet, specialiserat på mjukvarudesign. Programmet gav mig praktisk erfarenhet inom mjukvaruutveckling, projektledning och teamarbete, och inkluderade arbetsplatsförlagt lärande som gav värdefull jobberfarenhet. Detta lade en solid grund för min ingenjörskarriär."
+            labels={[
+              "Mjukvarudesign",
+              "Projektledning",
+              "Teamarbete",
+              "Jobberfarenhet",
+            ]}
           />
+
           <EducationBlock
             title="NTI Gymnasiet"
             experience="2020 - 2023"
             description="Tog examen från NTI Gymnasiets teknikprogram med inriktning på information och medieteknik. Utbildningen omfattade kurser i programmering, webbutveckling och nätverksteknik. Jag genomförde även en extra kurs i företagsekonomi, vilket breddade min förståelse för affärsverksamhet och ekonomiska principer."
-            labels={["Programmering", "Webbutveckling", "Företagsekonomi"]}
+            labels={["Programmering", "Företagsekonomi"]}
           />
         </div>
 
@@ -74,18 +81,17 @@ const Main = () => {
 
         <h2>Metodik</h2>
         <p style={{ textAlign: "justify" }} className="bigP">
-          Min metodik bygger på en djupgående förmåga att snabbt och effektivt
-          förstå komplexa koncept. Jag har en naturlig talang för att
-          identifiera samband och skapa en helhetsbild, vilket gör att jag
-          snabbt kan sätta mig in i nya områden och sammanhang. Med ett
-          analytiskt sinne och ett unikt sätt att tänka kan jag se kärnan i
-          problem och förstå dem från flera perspektiv. Detta tillvägagångssätt
-          ger mig möjligheten att fatta välgrundade och rationella beslut som
-          bygger på insikt snarare än antaganden. Jag drivs av en stark vilja
-          att lära mig nytt, och jag har en beprövad förmåga att omvandla ny
-          kunskap till konkreta resultat. För mig handlar metodik inte bara om
-          struktur och teknik, det är ett sätt att kombinera förståelse oc h
-          utförande för att uppnå långsiktigt hållbara lösningar.
+          Jag älskar att snabbt förstå komplexa idéer. Jag har en naturlig
+          förmåga att se samband och skapa en helhetsbild, vilket gör att jag
+          lätt kan sätta mig in i nya områden och sammanhang. Med mitt
+          analytiska sinne och unika sätt att tänka kan jag hitta kärnan i
+          problem och se dem från olika perspektiv. Detta gör att jag kan fatta
+          välgrundade och rationella beslut baserade på insikt snarare än
+          antaganden. Jag drivs av en stark vilja att lära mig nya saker och har
+          visat att jag kan omvandla ny kunskap till konkreta resultat. För mig
+          handlar metodik inte bara om struktur och teknik; det är ett sätt att
+          kombinera förståelse och handling för att uppnå långsiktigt hållbara
+          lösningar.
         </p>
         <br />
       </div>
