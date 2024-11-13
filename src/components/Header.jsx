@@ -22,16 +22,12 @@ const Header = () => {
   };
 
   return (
-    <>
+    <div id="header">
       <h1
         style={{ textAlign: "center", fontSize: "2rem", marginBottom: "20px" }}
       >
         Information
       </h1>
-
-      <button id="toggle-theme" onClick={toggleTheme}>
-        {isLightMode ? "Switch to Dark Mode" : "Switch to Light Mode"}
-      </button>
       <hr
         style={{
           width: "calc(100% + 100px)",
@@ -39,7 +35,7 @@ const Header = () => {
           marginRight: "-50px",
         }}
       />
-      <div className="menu">
+      <div id="navMenu">
         <button onClick={() => navigate("/")}>
           <h3>Om Mig</h3>
         </button>
@@ -60,7 +56,10 @@ const Header = () => {
           marginRight: "-50px",
         }}
       />
-    </>
+      <button id="modeToggleButton" onClick={toggleTheme}>
+        {isLightMode ? "Switch to Dark Mode" : "Switch to Light Mode"}
+      </button>
+    </div>
   );
 };
 

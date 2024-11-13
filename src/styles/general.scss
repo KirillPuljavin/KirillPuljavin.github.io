@@ -2,6 +2,8 @@
 * {
   box-sizing: border-box;
   font-family: Verdana;
+  transition: background-color 0.2s ease, transform 0.2s ease, height 0.2s ease,
+    margin 0.2s ease, box-shadow 0.2s ease;
 }
 
 html {
@@ -78,8 +80,12 @@ a:hover {
 }
 
 button {
+  display: flex;
   border: 1px solid;
-  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  cursor: pointer;
 }
 
 button:hover {
@@ -92,6 +98,7 @@ h3,
 h4,
 h5 {
   font-family: "Microsoft Sans Serif";
+  align-items: center;
 }
 
 p {
@@ -117,23 +124,36 @@ p {
   display: flex;
   flex-direction: column;
 
-  .menu {
-    display: flex;
-    justify-content: center;
+  #header {
     width: 100%;
 
-    button {
-      border: none;
-      width: 25%;
-      height: 50px;
+    #modeToggleButton {
+      position: absolute;
+      left: 20px;
+      top: 20px;
       cursor: pointer;
-      transition: background-color 0.2s ease, transform 0.2s ease;
     }
 
-    h3 {
-      margin: 0;
-      padding: 10px 20px;
-      font-size: 1rem;
+    #navMenu {
+      display: flex;
+      justify-content: center;
+
+      button {
+        width: 100%;
+        border: none;
+        height: 50px;
+
+        &:hover {
+          margin: -6px 0 -6px 0;
+          height: calc(50px + 12px);
+        }
+      }
+
+      h3 {
+        margin: 0;
+        padding: 10px 20px;
+        font-size: 1rem;
+      }
     }
   }
 
@@ -181,94 +201,94 @@ p {
         }
       }
     }
-  }
 
-  #Utbildning {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    #Utbildning {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
 
-    .education-block {
-      border: 1.5px solid;
-      border-radius: 8px;
-      padding: 20px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      .education-block {
+        border: 1.5px solid;
+        border-radius: 8px;
+        padding: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-      &:hover {
-        /* Hover styles will be in mode files */
-      }
-
-      .header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 10px;
-
-        .block-title {
-          font-size: 1.3rem;
-          font-weight: 600;
-          flex-grow: 1;
+        &:hover {
+          cursor: pointer;
         }
 
-        .experience {
-          font-size: 0.9rem;
-          padding: 3px 8px;
-          border-radius: 5px;
-          font-weight: 500;
-          margin-top: 5px;
-          margin-left: 10px;
-        }
-
-        .arrow {
-          transition: transform 0.3s ease;
-          font-size: 1.2rem;
-          margin-left: 10px;
+        .header {
           display: flex;
           align-items: center;
+          justify-content: space-between;
+          margin-bottom: 10px;
+
+          .block-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            flex-grow: 1;
+          }
+
+          .experience {
+            font-size: 0.9rem;
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-weight: 500;
+            margin-top: 5px;
+            margin-left: 10px;
+          }
+
+          .arrow {
+            transition: transform 0.3s ease;
+            font-size: 1.2rem;
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+          }
+
+          &.expanded .arrow {
+            transform: rotate(180deg);
+          }
         }
 
-        &.expanded .arrow {
-          transform: rotate(180deg);
-        }
-      }
-
-      .block-content {
-        max-height: 0;
-        opacity: 0;
-        transition: max-height 0.4s ease, opacity 0.4s ease;
-        overflow: hidden;
-        margin-top: 10px;
-
-        p {
-          font-size: 0.95rem;
-          text-align: justify;
-          margin: 0;
-          line-height: 1.6;
-        }
-      }
-
-      &.expanded {
         .block-content {
-          max-height: 300px;
-          opacity: 1;
+          max-height: 0;
+          opacity: 0;
+          transition: max-height 0.4s ease, opacity 0.4s ease;
+          overflow: hidden;
+          margin-top: 10px;
+
+          p {
+            font-size: 0.95rem;
+            text-align: justify;
+            margin: 0;
+            line-height: 1.6;
+          }
         }
-      }
 
-      .labels {
-        margin-top: 15px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
+        &.expanded {
+          .block-content {
+            max-height: 300px;
+            opacity: 1;
+          }
+        }
 
-        .label {
-          padding: 5px 10px;
-          border-radius: 20px;
-          font-size: 0.8rem;
-          font-weight: 500;
+        .labels {
+          margin-top: 15px;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+
+          .label {
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+          }
         }
       }
     }
