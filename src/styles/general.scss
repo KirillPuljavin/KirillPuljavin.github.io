@@ -179,7 +179,6 @@ p {
       #nameAndAge {
         margin-bottom: 0;
       }
-
       .socials {
         display: flex;
         align-items: center;
@@ -228,18 +227,13 @@ p {
           margin-bottom: 10px;
 
           .block-title {
-            font-size: 1.3rem;
-            font-weight: 600;
+            font-size: 1.25rem;
             flex-grow: 1;
           }
 
           .experience {
+            padding: 0 10px;
             font-size: 0.9rem;
-            padding: 3px 8px;
-            border-radius: 5px;
-            font-weight: 500;
-            margin-top: 5px;
-            margin-left: 10px;
           }
 
           .arrow {
